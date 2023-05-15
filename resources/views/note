@@ -1,0 +1,127 @@
+ /*
+   
+
+    //Finance Bar
+
+    var financey = JSON.parse('{!! json_encode($Business_Investments) !!}')
+    var financex = JSON.parse('{!! json_encode($finance_count) !!}')
+
+    
+
+    //Sector Bar
+
+    var sectorx = JSON.parse('{!! json_encode($sectors) !!}')
+    var sectory = JSON.parse('{!! json_encode($sector_count) !!}')*/
+
+    <div class="table-responsive mt-3">
+                        <!-- Personal Informations -->
+                        <table class="memberTable">
+                            <tr>
+                                <th>First Name: </th>
+                                <td> {{$item['firstName']}}</td>
+                               
+                            </tr>
+                            <tr>
+                                <th>Last Name: </th>
+                                <td> {{$item['lastName']}}</td>
+                               
+                            </tr>
+                            <tr>
+                                <th>Email Address: </th>
+                                <td> {{$item['email']}}</td>
+                                
+                            </tr>
+                            <tr>
+                                <th>Phone Number: </th>
+                                <td> {{$item['phoneNumber']}}</td>
+                        
+                            </tr>
+                            <tr>
+                                <th>Gender: </th>
+                                <td> {{$item['gender']}}</td>
+                                <th>NIC Number: </th>
+                                <td> {{$item['nic']}}</td>
+                            </tr>
+                            <tr>
+                                <th>Date of Birth: </th>
+                                <td> {{$item['dob']}}</td>
+                              
+                            </tr>
+                            <tr>
+                               
+                                
+                            </tr>
+                            <tr>
+                                <th>Language:</th>
+                                <td> {{$item['motherLang']}}</td>
+                                <th>Nationality: </th>
+                                <td> {{$item['nationality']}}</td>
+                            </tr>
+                            <tr>
+                              
+                                <th>Position: </th>
+                                <td> {{$item['position']}}</td>
+                            </tr>
+                            <tr>
+                                <th>Business Name:</th>
+                                <td> {{$item['businessName']}}</td>
+                                <th>Business Email: </th>
+                                <td> {{$item['businessEmail']}}</td>
+                            </tr>
+                            <tr>
+                                <th>Phone Number:</th>
+                                <td> {{$item['businessPhoneNumber']}}</td>
+                                <th>Website:</th>
+                                <td> {{$item['businessWebsite']}}</td>
+                            </tr>
+                            <tr>
+                               
+                                <th> Starting Date: </th>
+                                <td> {{$item['startingDate']}}</td>
+                            </tr>
+                            <tr>
+                                <th>Starting Capital:</th>
+                                <td> {{$item['startingCapital']}}</td>
+                                <th>Currency:  </th>
+                                <td> {{$item['startingCapitalCurrency']}}</td>
+                            </tr>
+                            <tr>
+                                <th>Annual Revenue:</th>
+                                <td> {{$item['annualRevenue']}}</td>
+                                <th>Currency: </th>
+                                <td> {{$item['annualRevenueCurrency']}}</td>
+                            </tr>
+                            <tr>
+                                <th>Male Employee:</th>
+                                <td> {{$item['maleEmp']}}</td>
+                                <th>Female Employee: </th>
+                                <td> {{$item['femaleEmp']}}</td>
+                            </tr>
+                            <tr>
+                               
+                            </tr>
+                        </table>
+                        <!-- End of Personal Information -->
+                    </div>
+
+@if ($membership == [])
+            <div class="col-lg-6">
+                <div class="box-shadow m-4">
+                    <h1 class="p-4">Membership Information</h1>
+                    <div class="row">
+                        <div class="col-md-12 p-4">
+                            <div class="d-flex">
+                                <span class="text-danger mr-auto"> Bill is null </span>
+                                <a href="{{URL::TO('add-member')}}" class="custom-btn add-new-btn">
+                                <i class="fa-solid fa-plus"></i> Add New</a>    
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>            
+            @else
+
+            
+
+
+                    
