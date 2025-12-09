@@ -18,7 +18,7 @@
                         class="rounded-circle img-thumbnail mt-3">
                     <h1 class="mt-3" style="color:white;">Login To Continue</h1>
                 </div>
-                <form action="login" method="POST" id="loginForm">
+                <form action="{{'login' }}" method="POST" id="loginForm">
                     @csrf
                     <div class="form-row mx-5 my-5">
                         <div class="col-lg-12">
@@ -35,7 +35,7 @@
                             @endif
                                 <div class="form-group">
                                     <label for="username" style="color:white">Username or Email address:</label>
-                                    <input type="email" name="username" class="form-control" placeholder="Enter email" autocomplete="off">
+                                    <input type="text" name="username" class="form-control" placeholder="Enter username or email">
                                 </div>
                                 <div class="form-group">
                                     <label for="password" style="color:white">Password:</label>

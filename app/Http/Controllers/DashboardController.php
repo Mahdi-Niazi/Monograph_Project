@@ -11,11 +11,13 @@ use App\Models\member;
 use App\Models\news;
 use App\Models\province;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
     //
     function index(){
+        
         $education_chart = education::select('educationID','educationLevel')->get()->groupBy(function($data){
             return $data->educationLevel;
         });
@@ -71,10 +73,18 @@ class DashboardController extends Controller
         $business = business::count();
        
         
-               return view('dashboard', ['Education_levels'=>$Education_levels, 'level_count'=>$level_count
-    , 'Address_Cities' => $addresses, 'Address_count' => $address_counts,
-     'years'=>$years, 'year_count'=>$year_count, 'sectors'=>$Business_sectors, 'sec_count'=>$sector_count,
-      'event'=>$event, 'news'=>$news, 'member'=>$member, 'business'=>$business]);
+               return view('dashboard', [
+                'Education_levels'=>$Education_levels, 
+                'level_count'=>$level_count,
+                'addresses'=>$addresses,
+                'address_counts'=>$address_counts,
+                'years'=>$years, 
+                'year_count'=>$year_count, 
+                'sectors'=>$Business_sectors, 
+                'sec_count'=>$sector_count,
+                'event'=>$event, 'news'=>$news, 
+                'member'=>$member, 
+                'business'=>$business]);
 
     }
     function showProfile(){

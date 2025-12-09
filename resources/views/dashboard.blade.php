@@ -125,8 +125,10 @@
     var __xdata = JSON.parse('{!! json_encode($level_count) !!}')
 
     //Address of Business
-    var AddressY = JSON.parse('{!! json_encode($Address_Cities) !!}')
-    var Addressx = JSON.parse('{!! json_encode($Address_count) !!}')
+ var AddressY = JSON.parse('{!! json_encode($addresses) !!}');       // labels (province names)
+var Addressx = JSON.parse('{!! json_encode($address_counts) !!}');  // numbers (count per province)
+
+
 
     //membership year
     var yeary = JSON.parse('{!!    json_encode($years) !!}')

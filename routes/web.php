@@ -88,7 +88,7 @@ Route::middleware(['auth','isClerk'])->group(function(){
         Route::get('address','address');  
         Route::post('address', 'store');
         Route::post('/getProvince', 'getProvince');
-        Route::post('/getDistrict', 'getDistrict');
+       Route::match(['get','post'], '/getDistrict', 'getDistrict');
     });
     //Education 
     Route::controller(EducationController::class)->group(function (){

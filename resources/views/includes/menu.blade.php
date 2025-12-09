@@ -12,20 +12,20 @@
                 <i class="fa-solid fa-gauge-high"></i> Dashboard
             </a>
         </li>
-        @if(auth()->user()->role == '2'||auth()->user()->role == '0')
+        <!-- @if(auth()->user()->role == '2'||auth()->user()->role == '0') -->
         <li class="nav-item menu-li">
             <a class="nav-link menu-links" href="{{URL::TO('view-members')}}">
             <i class="fa-solid fa-people-group"></i> Members 
             </a>
         </li>
-        @endif
-        @if(auth()->user()->role == '3'||auth()->user()->role == '0')
+        <!-- @endif -->
+        <!-- @if(auth()->user()->role == '3'||auth()->user()->role == '0') -->
         <li class="nav-item menu-li">
             <a href="{{URL::TO('/view-bill')}}" class="nav-link menu-links">
                 <i class="fa-solid fa-money-bills"></i> Bills </a>
         </li>
-        @endif
-        @if(auth()->user()->role == '2'||auth()->user()->role == '0')
+        <!-- @endif -->
+        <!-- @if(auth()->user()->role == '2'||auth()->user()->role == '0') -->
         <li class="nav-item menu-li">
             <a href="{{URL::TO('/view-news')}}" class="nav-link menu-links"> <i class="fa-solid fa-newspaper"></i>
                 News
@@ -37,8 +37,8 @@
             Events
             </a>
         </li>
-        @endif
-        @if(auth()->user()->role == '0')
+        <!-- @endif
+        @if(auth()->user()->role == '0') -->
         <li class="nav-item menu-li">
             <a class="nav-link menu-links" data-toggle="collapse" href="#collapse4">
                 <i class="fa-solid fa-gear"></i>
@@ -59,7 +59,7 @@
                 </ul>
             </div>
         </li>
-        @endif
+        <!-- @endif -->
     </ul>
 </div>
 
